@@ -1,0 +1,34 @@
+<form #loginForm="ngForm" (submit)="auth()">
+    <div class="error" [hidden]="!error">{{ error }}</div>
+    <div class="col-xs-offset-2 col-xs-8" style="margin-top: .5rem">
+        <md-input 
+            #login="ngModel" 
+            [(ngModel)]="user.username" 
+            name="login" 
+            placeholder="Login" 
+            type="text" 
+            required>
+        </md-input>
+    </div>
+    <div [hidden]="login.valid || login.pristine" class="error">
+        Login is required
+    </div>
+    <div class="col-xs-offset-2 col-xs-8">
+        <md-input 
+            #password="ngModel" 
+            [(ngModel)]="user.password" 
+            name="password" 
+            placeholder="Password" 
+            type="password" 
+            required>
+        </md-input>
+    </div>
+    <div [hidden]="password.valid || password.pristine" class="error">
+        Password is required
+    </div>
+    <div class="col-xs-offset-2 col-xs-8" style="margin-bottom: .5rem">
+        <button [disabled]="!loginForm.form.valid" md-raised-button color="primary" type="submit">
+            SING IN
+        </button>
+    </div>
+</form>

@@ -1,0 +1,12 @@
+<md-card (mouseenter)="toggle()" (mouseleave)="toggle()" class="shadow-1">
+    <div (click)="onDelete()" *ngIf="showDelete" class="icon">
+        <i class="material-icons">
+            delete
+        </i>
+    </div>
+<a [routerLink]="[deck.id]">
+    <md-card-title>
+        {{ deck.name }}
+    </md-card-title>
+</a>
+</md-card>

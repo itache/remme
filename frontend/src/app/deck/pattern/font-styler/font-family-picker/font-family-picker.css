@@ -1,0 +1,37 @@
+  .family-selector {
+      position: relative;
+  }
+  
+  .selector {
+      min-width: 140px;
+      padding: 10px;
+      background-color: white;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      z-index: 99;
+  }
+  
+  .family {
+      height: 20px;
+      width: 140px;
+      cursor: pointer;
+      margin-right: 10px;
+      margin-bottom: 10px;
+  }
+
+  .arrow { 
+    font-size:10px; 
+    text-decoration:none; 
+    position:relative; 
+    top:-1px;
+    vertical-align: text-top;
+  }
+  
+  .family:hover {
+      background-color: #e0e0e0;
+  }
+
+  .selected {
+    background-color: #e0e0e0;
+  }

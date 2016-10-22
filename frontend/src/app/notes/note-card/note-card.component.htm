@@ -1,0 +1,14 @@
+<md-card (mouseenter)="toggle()" (mouseleave)="toggle()" [ngStyle]="{'background': note.color}" class="shadow-1">
+    <div (click)="onChecked()" *ngIf="showCheck" class="icon">
+        <i class="material-icons">
+            check
+        </i>
+    </div>
+    <span></span>
+    <md-card-title>
+        {{ note.title }}
+    </md-card-title>
+    <md-card-content>
+        {{ note.value }}
+    </md-card-content>
+</md-card>

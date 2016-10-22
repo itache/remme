@@ -1,0 +1,15 @@
+<div [ngStyle]="{'background-color': newNote.color}" class="note-creator shadow">
+    <form (submit)="onCreateNode()" class="row">
+        <md-input *ngIf="fullForm" [(ngModel)]="newNote.title" class="col-xs-10" name="newNoteTitle" placeholder="Title" type="text"></md-input>
+        <md-input (focus)="toggle(true)" [(ngModel)]="newNote.value" class="col-xs-10" name="newNoteValue" placeholder="Take a note..." type="text"></md-input>
+        <div *ngIf="fullForm" class="actions col-xs-12 row between-xs">
+            <div class="col-xs-3">
+                <color-picker (selected)="onColorSelect($event)" [colors]="colors">
+                </color-picker>
+            </div>
+            <button md-button type="submit">
+                Done
+            </button>
+        </div>
+    </form>
+</div>

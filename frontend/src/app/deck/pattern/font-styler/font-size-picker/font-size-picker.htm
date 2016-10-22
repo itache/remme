@@ -1,0 +1,14 @@
+<div>
+	<i 
+		[class.disabled]="size >= max"
+		(click)="changeSize(size + 10)" 
+		class="material-icons icon">
+			add_circle
+	</i>
+	<i 
+		[class.disabled]="size <= min"
+		(click)="changeSize(size - 10)" 
+		class="material-icons icon">
+			remove_circle
+	</i>
+</div>

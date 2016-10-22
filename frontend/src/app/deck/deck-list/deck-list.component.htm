@@ -1,0 +1,12 @@
+<div class="row center-xs notes">
+    <div class="col-xs-6 creator">
+        <deck-creator (createDeck)="onCreateDeck($event)">
+        </deck-creator>
+    </div>
+    <div class="notes col-xs-8">
+        <div class="row between-xs">
+            <deck-card (deleted)="onDeleteDeck($event)" *ngFor="let deck of decks" [deck]="deck" class="col-xs-4">
+            </deck-card>
+        </div>
+    </div>
+</div>

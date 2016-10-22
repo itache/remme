@@ -1,0 +1,12 @@
+<div class="row center-xs notes">
+    <div class="col-xs-6 creator">
+        <field-creator (createField)="onCreate($event)">
+        </field-creator>
+    </div>
+    <div class="notes col-xs-8">
+        <div class="row between-xs">
+            <pattern-field (deleted)="onDeleteField($event)" *ngFor="let field of fields" [field]="field" class="col-xs-4">
+            </pattern-field>
+        </div>
+    </div>
+</div>

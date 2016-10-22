@@ -1,0 +1,62 @@
+<form [formGroup]="registerForm" (submit)="singup(registerForm.value)">
+    <div class="col-xs-offset-2 col-xs-8" style="margin-top: .5rem">
+        <md-input 
+            formControlName="login" placeholder="Login" type="text" required>
+        </md-input>
+        <div *ngIf='registerForm.controls.login.touched && registerForm.controls.login.errors' class="error">
+          <p *ngIf='registerForm.controls.login.errors.required'>
+            Username is required.
+          </p>
+          <p *ngIf='registerForm.controls.login.errors.minlength'>
+            Your name needs to be at least 3 characters.
+          </p>
+          <p *ngIf='registerForm.controls.login.errors.cannotContainSpace'>
+            Username cannot contain space.
+          </p>
+          <p *ngIf='registerForm.controls.login.errors.notUniqueName'>
+            User with this name already exists.
+          </p>
+        </div>
+    </div>
+    <div class="col-xs-offset-2 col-xs-8">
+        <md-input formControlName="email" placeholder="Email" type="text" required>
+        </md-input>
+        <div *ngIf='registerForm.controls.email.touched && registerForm.controls.email.errors' class="error">
+          <p *ngIf='registerForm.controls.email.errors.required'>
+            Email is required.
+          </p>
+          <p *ngIf='registerForm.controls.email.errors.incorrectEmailFormat'>
+            Email is incorrect.
+          </p>
+        </div>
+    </div>
+    <div class="col-xs-offset-2 col-xs-8">
+        <md-input formControlName="password" placeholder="Password" type="password" required>
+        </md-input>
+        <div *ngIf='registerForm.controls.password.touched && registerForm.controls.password.errors' class="error">
+          <p *ngIf='registerForm.controls.password.errors.required'>
+            Password is required.
+          </p>
+          <p *ngIf='registerForm.controls.password.errors.minlength'>
+            Password needs to be at least 8 characters.
+          </p>
+        </div>
+    </div>
+    <div class="col-xs-offset-2 col-xs-8">
+        <md-input formControlName="passConfirm" placeholder="Password Confirmation" type="password" required>
+        </md-input>
+        <div *ngIf='registerForm.controls.passConfirm.touched && registerForm.controls.passConfirm.errors' class="error">
+            <p *ngIf='registerForm.controls.passConfirm.errors.required'>
+                Password Confirmation is required.
+            </p>
+            <p *ngIf='registerForm.controls.passConfirm.errors.notEquivalent'>
+                Passwords do not match.
+            </p>
+        </div>
+    </div>
+    <div class="col-xs-offset-2 col-xs-8" style="margin-bottom: .5rem">
+        <button [disabled]="!registerForm.valid" md-raised-button color="primary" type="submit">
+            SING UP
+        </button>
+    </div>
+</form>

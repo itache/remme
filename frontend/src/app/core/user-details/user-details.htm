@@ -1,0 +1,4 @@
+<span class="name">{{ user.username }}</span>
+<i *ngIf='authService.isAuthorized()' (click)="logout()" class="material-icons icon">
+   exit_to_app
+</i>

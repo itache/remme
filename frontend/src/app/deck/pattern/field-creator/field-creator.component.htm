@@ -1,0 +1,22 @@
+<div class="note-creator shadow">
+    <form (submit)="onCreateField()" class="row">
+        <div *ngIf="fullForm" class="col-xs-12">
+            <font-styler class="row"
+                (styleChanged)="onStyleChanged($event)"
+                [style]="newField.style"
+                >
+            </font-styler>
+        </div>
+        <md-input 
+            (focus)="toggle(true)"
+            [(ngModel)]="newField.name"
+            [ngStyle]="newField.style" 
+            class="col-xs-12" 
+            name="newDeckName" 
+            type="text">
+        </md-input>
+        <button *ngIf="fullForm" md-button type="submit">
+            Done
+        </button>
+    </form>
+</div>

@@ -1,0 +1,32 @@
+<div class="col-xs-3">
+    <font-family-picker 
+        (familySelected)="onStyleChanged($event)" 
+        [fonts]="fonts" 
+        [selected]='style["font-family"]'>
+    </font-family-picker>
+</div>
+<div class="col-xs-3">
+    <font-color-picker 
+        (colorSelected)="onStyleChanged($event)" 
+        [colors]="colors"
+        [selected]='style["color"]'>
+    </font-color-picker>
+</div>
+<div class="col-xs-3">
+    <font-size-picker
+        (sizeChanged)="onStyleChanged($event)"
+        [max]="200"
+        [min]="40"
+        [initial]='style["font-size"]'>
+    </font-size-picker>
+</div>
+<div class="col-xs-3">
+    <font-boldness-switch
+        (boldChanged)="onStyleChanged($event)"
+        [initial]='style["font-weight"]'>
+    </font-boldness-switch>
+    <font-style-switch
+        (styleChanged)="onStyleChanged($event)"
+        [initial]='style["font-style"]'>
+    </font-style-switch>
+</div>

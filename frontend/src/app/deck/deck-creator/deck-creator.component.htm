@@ -1,0 +1,10 @@
+<div class="note-creator shadow">
+    <form (submit)="onCreateDeck()" class="row">
+        <md-input [(ngModel)]="name" class="col-xs-10" name="newDeckName" placeholder="Name" type="text"></md-input>
+        <div class="actions col-xs-12 row between-xs">
+            <button md-button type="submit">
+                Done
+            </button>
+        </div>
+    </form>
+</div>

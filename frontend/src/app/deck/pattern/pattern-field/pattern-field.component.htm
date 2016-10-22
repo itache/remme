@@ -1,0 +1,11 @@
+<md-card (mouseenter)="toggle()" (mouseleave)="toggle()" class="shadow-1">
+    <div (click)="onDelete()" *ngIf="showDelete" class="icon">
+        <i class="material-icons">
+            delete
+        </i>
+    </div>
+    <span></span>
+    <md-card-title>
+        {{ field.name }}
+    </md-card-title>
+</md-card>

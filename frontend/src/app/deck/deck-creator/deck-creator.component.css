@@ -1,0 +1,20 @@
+.note-creator {
+    padding: 20px;
+    background-color: white;
+    border-radius: 3px;
+}
+
+.title {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.full {
+    height: 100px;
+}
+
+.shadow {
+	-webkit-box-shadow: 3px 3px 15px 0px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 3px 3px 15px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 3px 3px 15px 0px rgba(50, 50, 50, 0.5);
+}

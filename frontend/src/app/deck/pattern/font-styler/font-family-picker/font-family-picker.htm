@@ -1,0 +1,15 @@
+<div class="family-selector">
+    <i (click)="showSelector(true)" class="material-icons icon">
+        font_download
+    </i><span class="arrow">&#9660;</span>
+    <div *ngIf="isSelectorVisible" class="selector row center-xs shadow-1">
+        <div
+        	(click)="selectFamily(font)" 
+            [class.selected] = "selected === font"
+        	*ngFor="let font of fonts" 
+        	[ngStyle]="{'font-family': font}" 
+        	class="family">
+        	{{ font }}
+        </div>
+    </div>
+</div>
